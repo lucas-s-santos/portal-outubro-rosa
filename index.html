@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outubro Rosa - Portal de Prevenção e Cuidado</title>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts, Font Awesome, AOS, Swiper... -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome (Ícones ) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-    <!-- Biblioteca de Animação (AOS ) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Biblioteca do Carrossel (Swiper.js ) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Nosso CSS -->
@@ -24,19 +18,24 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- CABEÇALHO COM NOVOS LINKS -->
     <header class="main-header">
         <nav class="main-nav">
             <a href="#inicio" class="logo"><i class="fa-solid fa-ribbon"></i> Outubro Rosa</a>
             <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#papanicolau">Prevenção</a></li>
-                <li><a href="#cancer-colo">A Doença</a></li>
-                <li><a href="#mitos-verdades">Mitos</a></li>
-                <li><a href="#apoio">Apoio</a></li>
-                <li><a href="#ajuda">Onde Ajudar</a></li>
+                <li><a href="#papanicolau">Câncer de Colo</a></li>
+                <li><a href="#mamografia">Câncer de Mama</a></li>
+                <li><a href="#calculator">Avalie seu Cuidado</a></li>
+                <li><a href="#timeline">Prevenção</a></li>
+                <li><a href="#glossary">Glossário</a></li>
+                <li><a href="#ajuda">Ajuda</a></li>
             </ul>
             <div class="header-buttons">
+                <div class="font-size-controls">
+                    <button id="font-decrease-btn" title="Diminuir fonte">A-</button>
+                    <button id="font-increase-btn" title="Aumentar fonte">A+</button>
+                </div>
                 <button id="theme-toggle-btn" title="Mudar tema"><i class="fa-solid fa-moon"></i></button>
                 <div class="menu-icon">
                     <div class="bar"></div>
@@ -52,108 +51,201 @@
         <section id="inicio" class="hero-section">
             <div class="hero-content">
                 <h1><span id="typing-effect"></span></h1>
-                <p data-aos="fade-up" data-aos-delay="200">Um portal completo sobre a prevenção ao câncer de colo do útero e a importância do cuidado feminino.</p>
+                <p data-aos="fade-up" data-aos-delay="200">Um portal completo sobre a prevenção ao câncer de colo do útero e de mama. A informação é a melhor proteção.</p>
             </div>
         </section>
 
-        <!-- SEÇÃO 2: PAPANICOLAU -->
+        <!-- SEÇÃO 2: PAPANICOLAU E CÂNCER DE COLO -->
         <section id="papanicolau" class="content-section">
             <div class="container">
-                <h2 data-aos="fade-right"><i class="fa-solid fa-stethoscope"></i> Prevenção e Papanicolau</h2>
+                <h2 data-aos="fade-right"><i class="fa-solid fa-stethoscope"></i> Câncer de Colo do Útero</h2>
                 <div class="content-wrapper">
                     <div class="text-content" data-aos="fade-right">
+                        <h3>Prevenção com Papanicolau</h3>
                         <p>O Papanicolau é a principal estratégia para detectar lesões e diagnosticar o câncer de colo do útero precocemente. O exame é simples, rápido, indolor e oferecido gratuitamente pelo SUS.</p>
                         <h4>Quem deve fazer?</h4>
                         <p>Mulheres com vida sexual ativa, especialmente entre 25 e 64 anos. Após dois resultados normais seguidos, pode ser feito a cada três anos.</p>
                     </div>
                     <div class="image-content" data-aos="fade-left" data-aos-delay="200">
-                        <img src="img/img_colo.jpg" alt="Ilustração do exame Papanicolau">
+                        <div class="image-container wide">
+                            <img src="img/imagem1.jpg" alt="Ilustração do exame Papanicolau">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO 3: CÂNCER DE COLO DO ÚTERO (A DOENÇA) -->
-        <section id="cancer-colo" class="content-section-dark">
+        <!-- SEÇÃO 3: CÂNCER DE MAMA E MAMOGRAFIA -->
+        <section id="mamografia" class="content-section-dark">
             <div class="container">
-                <h2 data-aos="fade-up"><i class="fa-solid fa-shield-virus"></i> Entendendo a Doença</h2>
+                <h2 data-aos="fade-up"><i class="fa-solid fa-x-ray"></i> Câncer de Mama e Mamografia</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">O tipo de câncer mais comum entre as mulheres no mundo. A detecção precoce através da mamografia e do autoexame é a chave para a cura.</p>
                 <div class="tab-nav" data-aos="fade-up" data-aos-delay="100">
-                    <button class="tab-link active" onclick="openTab(event, 'tab-intro')">Introdução</button>
-                    <button class="tab-link" onclick="openTab(event, 'tab-fatores')">Fatores de Risco</button>
-                    <button class="tab-link" onclick="openTab(event, 'tab-sintomas')">Sintomas</button>
-                    <button class="tab-link" onclick="openTab(event, 'tab-diagnostico')">Diagnóstico</button>
+                    <button class="tab-link active" onclick="openTab(event, 'tab-mamografia-content')">O que é?</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab-como-funciona')">Como Funciona?</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab-autoexame')">Autoexame</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab-exames-comp')">Outros Exames</button>
                 </div>
-                <div id="tab-intro" class="tab-content active" data-aos="fade-up" data-aos-delay="200">
-                    <h3>O que é?</h3>
-                    <p>É um tumor que se desenvolve no colo do útero, causado principalmente pela infecção persistente por alguns tipos do Papilomavírus Humano - HPV. A evolução é lenta e, se detectado na fase inicial, tem altíssimas chances de cura.</p>
+
+                <div id="tab-mamografia-content" class="tab-content active" data-aos="fade-up" data-aos-delay="200">
+                    <h3>O que é a Mamografia?</h3>
+                    <p>É um raio-X das mamas capaz de identificar microcalcificações e nódulos que não seriam notados na palpação. É a ferramenta mais eficaz para o diagnóstico precoce. A recomendação geral é que mulheres acima de 40 anos façam o exame anualmente, mas um médico sempre deve ser consultado.</p>
+                    <div class="image-container wide">
+                        <img src="img/mamografia-digital.jpg.png" alt="Mulher realizando exame de mamografia">
+                    </div>
                 </div>
-                <div id="tab-fatores" class="tab-content">
-                    <h3>Fatores de Risco</h3>
-                    <p>A infecção pelo HPV é o maior fator de risco. Outros fatores incluem: início precoce da atividade sexual, múltiplos parceiros, tabagismo, baixa imunidade e não fazer o Papanicolau regularmente.</p>
-                    <img src="img/img_fator_new.png" alt="Infográfico Fatores de Risco" class="tab-image">
+
+                <div id="tab-como-funciona" class="tab-content">
+                    <h3>Como o Exame Funciona?</h3>
+                    <p>O mamógrafo comprime as mamas por alguns segundos para espalhar o tecido mamário e obter uma imagem nítida. Essa compressão pode causar um desconforto temporário, mas é fundamental para a qualidade do exame e para reduzir a dose de radiação. O procedimento todo dura menos de 20 minutos.</p>
                 </div>
-                <div id="tab-sintomas" class="tab-content">
-                    <h3>Principais Sintomas</h3>
-                    <p>Na fase inicial, a doença é silenciosa. Os sintomas mais comuns em fases avançadas são sangramento vaginal anormal e corrimento com cor escura e mau cheiro.</p>
-                    <img src="img/img_sinto.png" alt="Infográfico Sintomas" class="tab-image">
+
+                <div id="tab-autoexame" class="tab-content">
+                    <h3>A Importância do Autoexame</h3>
+                    <p>O autoexame mensal ajuda a mulher a conhecer seu próprio corpo e a perceber qualquer anormalidade. Ele não substitui a mamografia, mas é uma ferramenta importantíssima de autoconhecimento e alerta. Ao identificar qualquer alteração, procure seu médico.</p>
+                    <div class="image-container wide">
+                        <img src="img/autoexame.png.jpg" alt="Infográfico ensinando a fazer o autoexame das mamas">
+                    </div>
                 </div>
-                <div id="tab-diagnostico" class="tab-content">
-                    <h3>Como é feito o Diagnóstico?</h3>
-                    <p>O rastreamento é feito com o Papanicolau. Se houver alterações, o médico pode solicitar uma colposcopia para examinar o colo do útero e realizar uma biópsia para confirmar o diagnóstico.</p>
-                    <img src="img/img_dia.png" alt="Estádios do Câncer" class="tab-image">
+
+                <div id="tab-exames-comp" class="tab-content">
+                    <h3>Exames Complementares</h3>
+                    <p>Além da mamografia, o médico pode solicitar outros exames para um diagnóstico mais preciso, como a Ultrassonografia, a Ressonância Magnética e, se necessário, a Biópsia, que é o único exame capaz de confirmar se um nódulo é maligno ou benigno.</p>
+                    <div class="content-wrapper-small">
+                        <div class="image-container square">
+                            <img src="img/ultrassom.jpeg" alt="Exame de ultrassom da mama">
+                        </div>
+                        <div class="image-container square">
+                            <img src="img/biopsia.jpg" alt="Médica analisando resultado de biópsia">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO 4: MITOS E VERDADES -->
-        <section id="mitos-verdades" class="content-section">
+        <!-- NOVA SEÇÃO: CALCULADORA DE CUIDADO -->
+        <section id="calculator" class="content-section">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-calculator"></i> Avalie seu Cuidado</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Responda a este questionário rápido e anônimo para receber uma recomendação personalizada sobre seus próximos passos na jornada de prevenção.</p>
+                
+                <form id="care-calculator-form" data-aos="fade-up" data-aos-delay="200">
+                    <div class="form-question">
+                        <label>1. Qual a sua faixa de idade?</label>
+                        <div class="options-group">
+                            <label><input type="radio" name="age" value="under25" required> Menos de 25 anos</label>
+                            <label><input type="radio" name="age" value="25-39"> 25 a 39 anos</label>
+                            <label><input type="radio" name="age" value="40plus"> 40 anos ou mais</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label>2. Você tomou a vacina contra o HPV?</label>
+                        <div class="options-group">
+                            <label><input type="radio" name="hpv" value="yes" required> Sim</label>
+                            <label><input type="radio" name="hpv" value="no"> Não</label>
+                            <label><input type="radio" name="hpv" value="notsure"> Não tenho certeza</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label>3. Quando foi seu último exame Papanicolau?</label>
+                        <div class="options-group">
+                            <label><input type="radio" name="papanicolau" value="lastyear" required> No último ano</label>
+                            <label><input type="radio" name="papanicolau" value="1-3years"> Entre 1 e 3 anos</label>
+                            <label><input type="radio" name="papanicolau" value="more3years"> Há mais de 3 anos</label>
+                            <label><input type="radio" name="papanicolau" value="never"> Nunca fiz / Não se aplica</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label>4. Você tem histórico familiar (mãe, irmã) de câncer de mama?</label>
+                        <div class="options-group">
+                            <label><input type="radio" name="family" value="yes" required> Sim</label>
+                            <label><input type="radio" name="family" value="no"> Não</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="calculator-submit-btn">Ver Minha Recomendação</button>
+                </form>
+
+                <div id="calculator-result" class="calculator-result-box" style="display: none;">
+                    <h3>Recomendação Personalizada:</h3>
+                    <p id="result-message"></p>
+                    <small>Lembre-se: esta é uma recomendação geral. A palavra final é sempre do seu médico. <a href="#ajuda">Encontre ajuda aqui.</a></small>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO LINHA DO TEMPO DA PREVENÇÃO -->
+        <section id="timeline" class="content-section-dark">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-timeline"></i> Linha do Tempo da Prevenção</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Um guia visual dos cuidados essenciais em cada fase da vida da mulher.</p>
+                <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-item"><div class="timeline-content"><h3>9 a 14 anos: Vacina HPV</h3><p>A vacinação contra o HPV é a forma mais eficaz de prevenção primária contra o câncer de colo do útero. É fundamental que meninas (e meninos) tomem as doses nesta faixa etária.</p><span class="timeline-date">Adolescência</span></div></div>
+                    <div class="timeline-item"><div class="timeline-content"><h3>A partir dos 20: Autoexame</h3><p>O autoexame das mamas deve se tornar um hábito mensal. Conhecer o próprio corpo é o primeiro passo para notar qualquer alteração. Lembre-se: ele não substitui os exames médicos.</p><span class="timeline-date">Vida Adulta</span></div></div>
+                    <div class="timeline-item"><div class="timeline-content"><h3>25 a 64 anos: Papanicolau</h3><p>O exame preventivo (Papanicolau) deve ser realizado regularmente. Após dois exames anuais com resultado normal, a frequência pode passar para a cada três anos, conforme orientação médica.</p><span class="timeline-date">25+</span></div></div>
+                    <div class="timeline-item"><div class="timeline-content"><h3>A partir dos 40: Mamografia</h3><p>A mamografia anual é recomendada pela Sociedade Brasileira de Mastologia a partir dos 40 anos. Ela é o exame mais eficaz para detectar o câncer de mama em estágio inicial.</p><span class="timeline-date">40+</span></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO GLOSSÁRIO -->
+        <section id="glossary" class="content-section">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-book-medical"></i> Descomplicando a Saúde: Glossário</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Entenda os termos médicos mais comuns de forma simples e direta.</p>
+                <div class="accordion" data-aos="fade-up" data-aos-delay="200">
+                    <div class="accordion-item"><button class="accordion-button">Biópsia</button><div class="accordion-content"><p>É um procedimento no qual um pequeno fragmento de tecido do corpo é removido para ser analisado em laboratório. É o único exame que pode confirmar com 100% de certeza se uma lesão é câncer ou não.</p></div></div>
+                    <div class="accordion-item"><button class="accordion-button">Colposcopia</button><div class="accordion-content"><p>Um exame que permite visualizar o colo do útero com uma lente de aumento (colposcópio). Geralmente é solicitado após um resultado alterado no Papanicolau para investigar a área suspeita.</p></div></div>
+                    <div class="accordion-item"><button class="accordion-button">HPV (Papilomavírus Humano)</button><div class="accordion-content"><p>Um vírus muito comum, transmitido principalmente por via sexual. Alguns tipos (de alto risco) são a principal causa do câncer de colo do útero se a infecção não for eliminada pelo corpo.</p></div></div>
+                    <div class="accordion-item"><button class="accordion-button">Nódulo Benigno vs. Maligno</button><div class="accordion-content"><p>Um nódulo é um caroço. **Benigno** significa que não é câncer. **Maligno** significa que é câncer e tem a capacidade de se espalhar (metástase).</p></div></div>
+                    <div class="accordion-item"><button class="accordion-button">Metástase</button><div class="accordion-content"><p>Ocorre quando as células de um câncer se desprendem do tumor original e formam novos tumores em outras partes do corpo. É o que caracteriza um estágio avançado da doença.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÕES ANTIGAS (MITOS, APOIO, GALERIA, AJUDA) -->
+        <section id="mitos-verdades" class="content-section-dark">
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-comment-dots"></i> Mitos e Verdades</h2>
                 <div class="myth-cards-container">
                     <div class="myth-card" data-aos="zoom-in"><div class="myth-card-inner"><div class="myth-card-front"><p>A vacina contra o HPV substitui o Papanicolau?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A vacina é essencial, mas não protege contra todos os tipos de HPV. O Papanicolau continua sendo indispensável.</p></div></div></div>
-                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="100"><div class="myth-card-inner"><div class="myth-card-front"><p>Câncer de colo de útero sempre apresenta sintomas?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Na fase inicial, a doença é silenciosa. Os sintomas só aparecem em estágios mais avançados. Por isso a prevenção é tão importante!</p></div></div></div>
-                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="200"><div class="myth-card-inner"><div class="myth-card-front"><p>Usar pílula anticoncepcional causa câncer de colo do útero?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Não há evidências diretas. O uso prolongado pode ser um fator de risco secundário, mas não é a causa. A causa principal é o HPV.</p></div></div></div>
+                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="100"><div class="myth-card-inner"><div class="myth-card-front"><p>Mamografia causa câncer de tireoide?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A dose de radiação é extremamente baixa e direcionada para as mamas. Não há evidências que comprovem essa relação.</p></div></div></div>
+                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="200"><div class="myth-card-inner"><div class="myth-card-front"><p>Achar um nódulo no autoexame é certeza de câncer?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Cerca de 80% dos nódulos encontrados são benignos. Mesmo assim, todo nódulo deve ser investigado por um médico.</p></div></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO 5: APOIO EMOCIONAL E DIREITOS -->
-        <section id="apoio" class="content-section-dark">
+        <section id="apoio" class="content-section">
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart"></i> Apoio Emocional e Direitos</h2>
                 <div class="content-wrapper">
                     <div class="text-content" data-aos="fade-right">
                         <h3>Apoio Psicológico</h3>
-                        <p>Receber um diagnóstico de câncer pode ser avassalador. O apoio psicológico é fundamental para a paciente e sua família. Conversar com um profissional, participar de grupos de apoio e compartilhar experiências ajuda a fortalecer a saúde mental durante o tratamento.</p>
+                        <p>Receber um diagnóstico de câncer pode ser avassalador. O apoio psicológico é fundamental para a paciente e sua família. Conversar com um profissional e participar de grupos de apoio ajuda a fortalecer a saúde mental durante o tratamento.</p>
                     </div>
                     <div class="text-content" data-aos="fade-left" data-aos-delay="100">
                         <h3>Direitos da Paciente</h3>
-                        <p>Pacientes com câncer têm direitos garantidos por lei no Brasil, como:</p>
-                        <ul>
-                            <li>Auxílio-doença e aposentadoria por invalidez (se necessário).</li>
-                            <li>Saque do FGTS e PIS/PASEP.</li>
-                            <li>Isenção de imposto de renda na aposentadoria.</li>
-                            <li>Tratamento gratuito pelo SUS.</li>
-                        </ul>
-                        <p>Procure o serviço social do seu hospital ou a Defensoria Pública para mais informações.</p>
+                        <p>Pacientes com câncer têm direitos garantidos por lei no Brasil, como auxílio-doença, saque do FGTS, isenção de imposto de renda na aposentadoria e tratamento gratuito pelo SUS. Procure o serviço social do seu hospital para mais informações.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO 6: GALERIA DA ESPERANÇA (AGORA COMO CARROSSEL) -->
-        <section id="galeria" class="content-section">
+        <section id="galeria" class="content-section-dark">
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-images"></i> Galeria da Esperança</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Imagens que inspiram cuidado, prevenção e a força da vida.</p>
                 <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/esperanca1.png" alt="Pessoas correndo em evento do Outubro Rosa" /></div>
-                        <div class="swiper-slide"><img src="img/esperanca2.png" alt="Grupo de mulheres unindo as mãos em sinal de apoio" /></div>
-                        <div class="swiper-slide"><img src="img/esperanca3.png" alt="Duas mulheres segurando o laço rosa, símbolo da campanha" /></div>
-                        <div class="swiper-slide"><img src="img/esperanca5.jpg" alt="Mãos se apoiando em um gesto de conforto e cuidado" /></div>
-                        <div class="swiper-slide"><img src="img/esperanca6.png" alt="Close nas mãos segurando o laço rosa"/></div>
-                        <div class="swiper-slide"><img src="img/esperanca7.png" alt="Calendário marcando o mês de Outubro com um laço rosa"/></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca1.png" alt="Duas mulheres segurando o laço rosa" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca2.png" alt="Mãos com laço rosa sobre a mesa" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca3.png" alt="Mãos unidas segurando laço rosa" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca5.jpg" alt="Caderno com laço rosa" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca6.png" alt="Mulher trabalhando no computador" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca7.png" alt="Pessoa pesquisando no computador" /></div></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -162,8 +254,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 7: ONDE BUSCAR AJUDA -->
-        <section id="ajuda" class="content-section-dark">
+        <section id="ajuda" class="content-section">
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-map-location-dot"></i> Onde Buscar Ajuda em Alfenas</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Procure a Unidade Básica de Saúde (UBS) mais próxima para agendar seu exame preventivo. A prevenção é um direito seu e é oferecida gratuitamente pelo SUS.</p>
@@ -171,7 +262,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29733.28453364234!2d-45.9616896538086!3d-21.424458400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sposto%20de%20saude!5e0!3m2!1spt-BR!2sbr!4v1730799900000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="support-links" data-aos="fade-up">
-                    <h3>Links Úteis Nacionais:</h3>
+                    <h4>Links Úteis Nacionais:</h4>
                     <ul>
                         <li><a href="https://www.gov.br/inca/pt-br" target="_blank">Instituto Nacional de Câncer (INCA )</a></li>
                         <li><a href="https://www.femama.org.br/" target="_blank">FEMAMA</a></li>
@@ -184,30 +275,29 @@
     <!-- BOTÃO VOLTAR AO TOPO -->
     <a href="#inicio" id="back-to-top-btn" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></a>
 
-    <!-- RODAPÉ -->
+    <!-- RODAPÉ COM NOVOS LINKS -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <h3><i class="fa-solid fa-ribbon"></i> Outubro Rosa</h3>
-                    <p>Um projeto de conscientização sobre a importância da prevenção ao câncer de colo do útero. Criado em 2022 e revitalizado em 2025.</p>
+                    <p>Um projeto de conscientização sobre a importância da prevenção ao câncer. Criado em 2022 e revitalizado em 2025.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Navegação</h3>
                     <ul>
                         <li><a href="#inicio">Início</a></li>
-                        <li><a href="#papanicolau">Prevenção</a></li>
-                        <li><a href="#cancer-colo">A Doença</a></li>
-                        <li><a href="#mitos-verdades">Mitos</a></li>
-                        <li><a href="#apoio">Apoio</a></li>
-                        <li><a href="#ajuda">Onde Ajudar</a></li>
+                        <li><a href="#papanicolau">Câncer de Colo</a></li>
+                        <li><a href="#mamografia">Câncer de Mama</a></li>
+                        <li><a href="#calculator">Avalie seu Cuidado</a></li>
+                        <li><a href="#timeline">Prevenção</a></li>
+                        <li><a href="#glossary">Glossário</a></li>
+                        <li><a href="#ajuda">Ajuda</a></li>
                     </ul>
                 </div>
                 <div class="footer-credits">
                     <h3>Créditos</h3>
-                    <p>Idealizado por:  
-Davi Wendell & Gabriel Nepomuceno</p>
-                    <p>Desenvolvido com a ajuda de Manus</p>
+                    <p>Idealizador Lucas Silva</p>
                 </div>
             </div>
             <div class="footer-bottom">&copy; Copyright 2025 - Todos os direitos reservados.</div>
@@ -219,22 +309,15 @@ Davi Wendell & Gabriel Nepomuceno</p>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
+        // --- INICIALIZAÇÃO DAS BIBLIOTECAS ---
         AOS.init({ duration: 1000, once: true } );
 
-        // --- INICIALIZAÇÃO DO CARROSSEL SWIPER ---
         var swiper = new Swiper(".mySwiper", {
-            cssMode: true,
+            effect: "coverflow", grabCursor: true, centeredSlides: true, slidesPerView: "auto",
+            coverflowEffect: { rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true, },
             loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            mousewheel: true,
-            keyboard: true,
+            pagination: { el: ".swiper-pagination", clickable: true, },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", },
         });
 
         new Typed('#typing-effect', {
@@ -242,6 +325,7 @@ Davi Wendell & Gabriel Nepomuceno</p>
             typeSpeed: 50, backSpeed: 25, backDelay: 2000, loop: true
         });
 
+        // --- LÓGICA DO MENU HAMBURGER ---
         const menuIcon = document.querySelector('.menu-icon');
         const navLinks = document.querySelector('.main-nav ul');
         menuIcon.addEventListener('click', () => {
@@ -249,35 +333,118 @@ Davi Wendell & Gabriel Nepomuceno</p>
             menuIcon.classList.toggle('active');
         });
 
+        // --- LÓGICA DO BOTÃO "VOLTAR AO TOPO" ---
         const backToTopButton = document.querySelector("#back-to-top-btn");
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) { backToTopButton.classList.add("show"); } 
             else { backToTopButton.classList.remove("show"); }
         });
 
+        // --- LÓGICA DAS ABAS (TABS) ---
         function openTab(evt, tabName) {
             let i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
+            const parentSection = evt.currentTarget.closest('section');
+            tabcontent = parentSection.querySelectorAll(".tab-content");
             for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-            tablinks = document.getElementsByClassName("tab-link");
+            tablinks = parentSection.querySelectorAll(".tab-link");
             for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
-        document.getElementById("tab-intro").style.display = "block";
+        
+        // --- LÓGICA DO GLOSSÁRIO (ACCORDION) ---
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isExpanded = button.classList.contains('active');
+                accordionButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.nextElementSibling.style.maxHeight = null;
+                });
+                if (!isExpanded) {
+                    button.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
 
-        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        // --- LÓGICA DA CALCULADORA DE CUIDADO ---
+        const calculatorForm = document.getElementById('care-calculator-form');
+        const resultBox = document.getElementById('calculator-result');
+        const resultMessage = document.getElementById('result-message');
+
+        calculatorForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const age = document.querySelector('input[name="age"]:checked').value;
+            const hpv = document.querySelector('input[name="hpv"]:checked').value;
+            const papanicolau = document.querySelector('input[name="papanicolau"]:checked').value;
+            const family = document.querySelector('input[name="family"]:checked').value;
+
+            let message = '';
+
+            if (age === '40plus' && family === 'yes') {
+                message = 'Atenção redobrada! Por ter 40 anos ou mais e histórico familiar, a mamografia anual é sua maior aliada. Converse com seu médico sobre a frequência ideal para você. Se seu Papanicolau está atrasado, aproveite para colocar os dois exames em dia. Cuidar de si é um ato de coragem!';
+            } else if (age === '40plus') {
+                message = 'Você está na fase de atenção para o câncer de mama. A mamografia anual é fundamental. Se seu último Papanicolau foi há mais de 3 anos, é uma ótima oportunidade para agendar uma consulta e cuidar da sua saúde de forma completa. Não deixe para depois!';
+            } else if (papanicolau === 'more3years' || papanicolau === 'never') {
+                message = 'Seu cuidado com o colo do útero precisa de atenção. O Papanicolau é um exame simples que salva vidas. Que tal aproveitar o Outubro Rosa para agendar sua consulta e colocar a prevenção em dia? Você merece esse cuidado!';
+            } else if (age === '25-39' && (papanicolau === 'lastyear' || papanicolau === '1-3years')) {
+                message = 'Parabéns! Você está no caminho certo com a prevenção do câncer de colo do útero. Continue com o acompanhamento regular e não se esqueça do autoexame mensal das mamas. Seu cuidado hoje é sua saúde de amanhã!';
+            } else if (age === 'under25' && hpv === 'no') {
+                message = 'Você está na idade ideal para se proteger! A vacina contra o HPV é a melhor forma de prevenção contra o câncer de colo do útero. Procure um posto de saúde e informe-se. Começar a se cuidar cedo faz toda a diferença!';
+            } else {
+                message = 'Excelente! Parece que você está atenta à sua saúde. Continue com os bons hábitos, como o autoexame mensal das mamas e as consultas regulares. A prevenção é sempre o melhor caminho. Compartilhe essa ideia!';
+            }
+
+            resultMessage.textContent = message;
+            resultBox.style.display = 'block';
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // --- LÓGICA DE ACESSIBILIDADE ---
         const body = document.body;
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const fontDecreaseBtn = document.getElementById('font-decrease-btn');
+        const fontIncreaseBtn = document.getElementById('font-increase-btn');
+        const htmlElement = document.documentElement;
+
         themeToggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
             const icon = themeToggleBtn.querySelector('i');
             if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('high-contrast-mode');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-adjust');
+            } else if (body.classList.contains('high-contrast-mode')) {
+                body.classList.remove('high-contrast-mode');
+                icon.classList.remove('fa-adjust');
+                icon.classList.add('fa-moon');
+            } else {
+                body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
             }
+        });
+
+        let currentFontSize = 16;
+        fontIncreaseBtn.addEventListener('click', () => {
+            if (currentFontSize < 22) {
+                currentFontSize += 2;
+                htmlElement.style.fontSize = currentFontSize + 'px';
+            }
+        });
+        fontDecreaseBtn.addEventListener('click', () => {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                htmlElement.style.fontSize = currentFontSize + 'px';
+            }
+        });
+
+        // Garante que a primeira aba seja aberta ao carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstTabDark = document.querySelector('#mamografia .tab-link');
+            if(firstTabDark) firstTabDark.click();
         });
     </script>
 
