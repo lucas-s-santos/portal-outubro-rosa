@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outubro Rosa - Portal de Prevenção e Cuidado</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Ícones ) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- Biblioteca de Animação (AOS ) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Biblioteca do Carrossel (Swiper.js ) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#inicio" class="logo"><i class="fa-solid fa-ribbon"></i> Outubro Rosa</a>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#papanicolau">Prevenção</a></li>
+                <li><a href="#cancer-colo">A Doença</a></li>
+                <li><a href="#mitos-verdades">Mitos</a></li>
+                <li><a href="#apoio">Apoio</a></li>
+                <li><a href="#ajuda">Onde Ajudar</a></li>
+            </ul>
+            <div class="header-buttons">
+                <button id="theme-toggle-btn" title="Mudar tema"><i class="fa-solid fa-moon"></i></button>
+                <div class="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO 1: INÍCIO (HERO ) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1><span id="typing-effect"></span></h1>
+                <p data-aos="fade-up" data-aos-delay="200">Um portal completo sobre a prevenção ao câncer de colo do útero e a importância do cuidado feminino.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: PAPANICOLAU -->
+        <section id="papanicolau" class="content-section">
+            <div class="container">
+                <h2 data-aos="fade-right"><i class="fa-solid fa-stethoscope"></i> Prevenção e Papanicolau</h2>
+                <div class="content-wrapper">
+                    <div class="text-content" data-aos="fade-right">
+                        <p>O Papanicolau é a principal estratégia para detectar lesões e diagnosticar o câncer de colo do útero precocemente. O exame é simples, rápido, indolor e oferecido gratuitamente pelo SUS.</p>
+                        <h4>Quem deve fazer?</h4>
+                        <p>Mulheres com vida sexual ativa, especialmente entre 25 e 64 anos. Após dois resultados normais seguidos, pode ser feito a cada três anos.</p>
+                    </div>
+                    <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                        <img src="img/img_colo.jpg" alt="Ilustração do exame Papanicolau">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: CÂNCER DE COLO DO ÚTERO (A DOENÇA) -->
+        <section id="cancer-colo" class="content-section-dark">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-shield-virus"></i> Entendendo a Doença</h2>
+                <div class="tab-nav" data-aos="fade-up" data-aos-delay="100">
+                    <button class="tab-link active" onclick="openTab(event, 'tab-intro')">Introdução</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab-fatores')">Fatores de Risco</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab-sintomas')">Sintomas</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab-diagnostico')">Diagnóstico</button>
+                </div>
+                <div id="tab-intro" class="tab-content active" data-aos="fade-up" data-aos-delay="200">
+                    <h3>O que é?</h3>
+                    <p>É um tumor que se desenvolve no colo do útero, causado principalmente pela infecção persistente por alguns tipos do Papilomavírus Humano - HPV. A evolução é lenta e, se detectado na fase inicial, tem altíssimas chances de cura.</p>
+                </div>
+                <div id="tab-fatores" class="tab-content">
+                    <h3>Fatores de Risco</h3>
+                    <p>A infecção pelo HPV é o maior fator de risco. Outros fatores incluem: início precoce da atividade sexual, múltiplos parceiros, tabagismo, baixa imunidade e não fazer o Papanicolau regularmente.</p>
+                    <img src="img/img_fator_new.png" alt="Infográfico Fatores de Risco" class="tab-image">
+                </div>
+                <div id="tab-sintomas" class="tab-content">
+                    <h3>Principais Sintomas</h3>
+                    <p>Na fase inicial, a doença é silenciosa. Os sintomas mais comuns em fases avançadas são sangramento vaginal anormal e corrimento com cor escura e mau cheiro.</p>
+                    <img src="img/img_sinto.png" alt="Infográfico Sintomas" class="tab-image">
+                </div>
+                <div id="tab-diagnostico" class="tab-content">
+                    <h3>Como é feito o Diagnóstico?</h3>
+                    <p>O rastreamento é feito com o Papanicolau. Se houver alterações, o médico pode solicitar uma colposcopia para examinar o colo do útero e realizar uma biópsia para confirmar o diagnóstico.</p>
+                    <img src="img/img_dia.png" alt="Estádios do Câncer" class="tab-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: MITOS E VERDADES -->
+        <section id="mitos-verdades" class="content-section">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-comment-dots"></i> Mitos e Verdades</h2>
+                <div class="myth-cards-container">
+                    <div class="myth-card" data-aos="zoom-in"><div class="myth-card-inner"><div class="myth-card-front"><p>A vacina contra o HPV substitui o Papanicolau?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A vacina é essencial, mas não protege contra todos os tipos de HPV. O Papanicolau continua sendo indispensável.</p></div></div></div>
+                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="100"><div class="myth-card-inner"><div class="myth-card-front"><p>Câncer de colo de útero sempre apresenta sintomas?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Na fase inicial, a doença é silenciosa. Os sintomas só aparecem em estágios mais avançados. Por isso a prevenção é tão importante!</p></div></div></div>
+                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="200"><div class="myth-card-inner"><div class="myth-card-front"><p>Usar pílula anticoncepcional causa câncer de colo do útero?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Não há evidências diretas. O uso prolongado pode ser um fator de risco secundário, mas não é a causa. A causa principal é o HPV.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: APOIO EMOCIONAL E DIREITOS -->
+        <section id="apoio" class="content-section-dark">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart"></i> Apoio Emocional e Direitos</h2>
+                <div class="content-wrapper">
+                    <div class="text-content" data-aos="fade-right">
+                        <h3>Apoio Psicológico</h3>
+                        <p>Receber um diagnóstico de câncer pode ser avassalador. O apoio psicológico é fundamental para a paciente e sua família. Conversar com um profissional, participar de grupos de apoio e compartilhar experiências ajuda a fortalecer a saúde mental durante o tratamento.</p>
+                    </div>
+                    <div class="text-content" data-aos="fade-left" data-aos-delay="100">
+                        <h3>Direitos da Paciente</h3>
+                        <p>Pacientes com câncer têm direitos garantidos por lei no Brasil, como:</p>
+                        <ul>
+                            <li>Auxílio-doença e aposentadoria por invalidez (se necessário).</li>
+                            <li>Saque do FGTS e PIS/PASEP.</li>
+                            <li>Isenção de imposto de renda na aposentadoria.</li>
+                            <li>Tratamento gratuito pelo SUS.</li>
+                        </ul>
+                        <p>Procure o serviço social do seu hospital ou a Defensoria Pública para mais informações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6: GALERIA DA ESPERANÇA (AGORA COMO CARROSSEL) -->
+        <section id="galeria" class="content-section">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-images"></i> Galeria da Esperança</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Imagens que inspiram cuidado, prevenção e a força da vida.</p>
+                <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/esperanca1.png" alt="Pessoas correndo em evento do Outubro Rosa" /></div>
+                        <div class="swiper-slide"><img src="img/esperanca2.png" alt="Grupo de mulheres unindo as mãos em sinal de apoio" /></div>
+                        <div class="swiper-slide"><img src="img/esperanca3.png" alt="Duas mulheres segurando o laço rosa, símbolo da campanha" /></div>
+                        <div class="swiper-slide"><img src="img/esperanca5.jpg" alt="Mãos se apoiando em um gesto de conforto e cuidado" /></div>
+                        <div class="swiper-slide"><img src="img/esperanca6.png" alt="Close nas mãos segurando o laço rosa"/></div>
+                        <div class="swiper-slide"><img src="img/esperanca7.png" alt="Calendário marcando o mês de Outubro com um laço rosa"/></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7: ONDE BUSCAR AJUDA -->
+        <section id="ajuda" class="content-section-dark">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-map-location-dot"></i> Onde Buscar Ajuda em Alfenas</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Procure a Unidade Básica de Saúde (UBS) mais próxima para agendar seu exame preventivo. A prevenção é um direito seu e é oferecida gratuitamente pelo SUS.</p>
+                <div class="map-container" data-aos="fade-up" data-aos-delay="200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29733.28453364234!2d-45.9616896538086!3d-21.424458400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sposto%20de%20saude!5e0!3m2!1spt-BR!2sbr!4v1730799900000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="support-links" data-aos="fade-up">
+                    <h3>Links Úteis Nacionais:</h3>
+                    <ul>
+                        <li><a href="https://www.gov.br/inca/pt-br" target="_blank">Instituto Nacional de Câncer (INCA )</a></li>
+                        <li><a href="https://www.femama.org.br/" target="_blank">FEMAMA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <a href="#inicio" id="back-to-top-btn" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- RODAPÉ -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3><i class="fa-solid fa-ribbon"></i> Outubro Rosa</h3>
+                    <p>Um projeto de conscientização sobre a importância da prevenção ao câncer de colo do útero. Criado em 2022 e revitalizado em 2025.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#papanicolau">Prevenção</a></li>
+                        <li><a href="#cancer-colo">A Doença</a></li>
+                        <li><a href="#mitos-verdades">Mitos</a></li>
+                        <li><a href="#apoio">Apoio</a></li>
+                        <li><a href="#ajuda">Onde Ajudar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-credits">
+                    <h3>Créditos</h3>
+                    <p>Idealizado por:  
+Davi Wendell & Gabriel Nepomuceno</p>
+                    <p>Desenvolvido com a ajuda de Manus</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; Copyright 2025 - Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true } );
+
+        // --- INICIALIZAÇÃO DO CARROSSEL SWIPER ---
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        new Typed('#typing-effect', {
+            strings: ['Cuidar de si é um ato de amor.', 'A prevenção salva vidas.', 'Informe-se. Cuide-se. Ame-se.'],
+            typeSpeed: 50, backSpeed: 25, backDelay: 2000, loop: true
+        });
+
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.main-nav ul');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.classList.toggle('active');
+        });
+
+        const backToTopButton = document.querySelector("#back-to-top-btn");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) { backToTopButton.classList.add("show"); } 
+            else { backToTopButton.classList.remove("show"); }
+        });
+
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("tab-intro").style.display = "block";
+
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const icon = themeToggleBtn.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+
+</body>
+</html>

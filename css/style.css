@@ -1,0 +1,109 @@
+/* --- VARIÁVEIS DE COR --- */
+:root {
+    --bg-color: #fffafc; --text-color: #4f4f4f; --heading-color: #d1308a; --primary-color: #d1308a;
+    --primary-dark: #a1256b; --header-bg: #ffffff; --card-bg: rgba(255, 255, 255, 0.1);
+    --card-border: rgba(255, 255, 255, 0.2); --hero-overlay: rgba(0, 0, 0, 0.4);
+}
+body.dark-mode {
+    --bg-color: #1a1a1a; --text-color: #c5c5c5; --heading-color: #ff89c4; --primary-color: #ff89c4;
+    --primary-dark: #d1308a; --header-bg: #222222; --card-bg: rgba(0, 0, 0, 0.2);
+    --card-border: rgba(255, 255, 255, 0.1); --hero-overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* --- ESTILOS GLOBAIS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Roboto', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; transition: background-color 0.3s, color 0.3s; }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+h1, h2, h3, h4, .logo { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--heading-color); }
+i { margin-right: 8px; }
+
+/* --- CABEÇALHO --- */
+.main-header { background-color: var(--header-bg); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: background-color 0.3s; }
+.main-nav { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1100px; margin: 0 auto; }
+.logo { font-size: 1.5rem; text-decoration: none; }
+.main-nav ul { list-style: none; display: flex; gap: 1.5rem; }
+.main-nav a { text-decoration: none; color: var(--text-color); font-weight: 700; position: relative; padding-bottom: 5px; }
+.main-nav a:hover { color: var(--primary-color); }
+.header-buttons { display: flex; align-items: center; gap: 1rem; }
+#theme-toggle-btn { background: none; border: none; color: var(--text-color); font-size: 1.2rem; cursor: pointer; }
+
+/* --- SEÇÃO HERO --- */
+.hero-section { position: relative; min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 80px 20px; background-image: url('../img/fundo-novo.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: #ffffff; }
+.hero-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--hero-overlay); z-index: 1; transition: background-color 0.3s; }
+.hero-content { position: relative; z-index: 2; }
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 1rem; color: #ffffff; min-height: 100px; }
+.hero-content p { font-size: 1.3rem; max-width: 650px; margin: 0 auto; color: #f1f1f1; }
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+.content-section, .content-section-dark { padding: 80px 0; }
+.content-section-dark { background-color: var(--primary-dark); color: #ffffff; }
+.content-section-dark h2, .content-section-dark h3, .content-section-dark h4, .content-section-dark a { color: #ffffff; }
+.content-section h2, .content-section-dark h2 { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+.content-wrapper { display: flex; align-items: center; gap: 3rem; margin-top: 2rem; }
+.text-content { flex: 1; }
+.text-content ul { padding-left: 20px; }
+.image-content { flex: 1; text-align: center; }
+.image-content img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+
+/* --- SISTEMA DE ABAS (TABS) --- */
+.tab-nav { overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.3); margin-bottom: 2rem; text-align: center; }
+.tab-link { background-color: inherit; float: none; display: inline-block; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; font-size: 1rem; color: #f1f1f1; font-family: 'Montserrat', sans-serif; }
+.tab-link:hover { background-color: rgba(255,255,255,0.1); }
+.tab-link.active { border-bottom: 3px solid var(--primary-color); }
+.tab-content { display: none; padding: 20px 12px; border-top: none; color: #f1f1f1; animation: fadeIn 0.5s; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+.tab-content.active { display: block; }
+.tab-content h3 { margin-bottom: 1rem; }
+.tab-image { width:100%; max-width:500px; margin: 1rem auto; display:block; border-radius: 8px; }
+
+/* --- SEÇÃO MITOS E VERDADES --- */
+.myth-cards-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 3rem; perspective: 1000px; }
+.myth-card { background-color: transparent; width: 300px; height: 200px; border: none; cursor: pointer; }
+.myth-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
+.myth-card:hover .myth-card-inner { transform: rotateY(180deg); }
+.myth-card-front, .myth-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.myth-card-front { background-color: var(--primary-color); color: white; font-size: 1.2rem; font-weight: bold; }
+.myth-card-back { background-color: var(--bg-color); color: var(--text-color); transform: rotateY(180deg); border: 1px solid var(--primary-color); }
+.myth-card-back h3 { color: var(--primary-color); }
+
+/* --- SEÇÃO GALERIA (CARROSSEL SWIPER) --- */
+.swiper { width: 100%; height: 450px; margin-top: 3rem; border-radius: 10px; }
+.swiper-slide { text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; }
+.swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.swiper-button-next, .swiper-button-prev { color: var(--primary-color) !important; }
+.swiper-pagination-bullet-active { background: var(--primary-color) !important; }
+
+/* --- SEÇÃO ONDE BUSCAR AJUDA --- */
+.section-subtitle { text-align: center; font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+.map-container { border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.support-links { margin-top: 2rem; text-align: center; }
+.support-links h3 { color: #fff; margin-bottom: 1rem; }
+.support-links ul { list-style: none; padding: 0; }
+.support-links li { margin-bottom: 0.5rem; }
+.support-links a { font-weight: bold; }
+
+/* --- RODAPÉ --- */
+.main-footer { background-color: #222; color: #ccc; padding: 40px 0 20px 0; }
+.footer-content { display: flex; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.footer-about, .footer-links, .footer-credits { flex: 1; min-width: 250px; }
+.footer-content h3 { color: #fff; margin-bottom: 1rem; }
+.footer-links ul { list-style: none; }
+.footer-links a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--primary-color); }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #444; font-size: 0.9rem; }
+
+/* --- BOTÃO VOLTAR AO TOPO --- */
+#back-to-top-btn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; border: none; outline: none; background-color: var(--primary-color); color: white; cursor: pointer; padding: 0; border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; opacity: 0; transition: opacity 0.4s, background-color 0.3s; }
+#back-to-top-btn.show { display: block; opacity: 1; }
+#back-to-top-btn:hover { background-color: var(--primary-dark); }
+
+/* --- MENU HAMBURGER E RESPONSIVIDADE --- */
+.menu-icon { display: none; cursor: pointer; }
+.menu-icon .bar { width: 25px; height: 3px; background-color: var(--text-color); margin: 5px 0; transition: 0.4s; }
+.menu-icon.active .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.menu-icon.active .bar:nth-child(2) { opacity: 0; }
+.menu-icon.active .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+@media (max-width: 768px) {
+    .main-nav ul { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; background-color: var(--header-bg
