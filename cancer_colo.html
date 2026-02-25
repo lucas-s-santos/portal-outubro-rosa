@@ -1,27 +1,69 @@
-<!DOCTYPE html><!DOCTYPE html>
-<html lang="pt-br">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Silva dos Santos">
+    <meta name="description" content="Hub de conteudos sobre cancer do colo do utero: introducao, fatores de risco, sintomas e diagnostico.">
+    <title>Cancer do Colo | Portal Outubro Rosa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="subpage-header">
+        <nav class="subpage-nav">
+            <a class="subpage-brand" href="index.html">Outubro Rosa</a>
+            <ul class="subpage-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="papanicolau.html">Papanicolau</a></li>
+                <li><a href="consulta.html">Consulta</a></li>
+                <li><a class="active" href="cancer_colo.html">Cancer do Colo</a></li>
+            </ul>
+            <div class="subpage-header-buttons">
+                <div class="font-size-controls" aria-label="Controle de tamanho de fonte">
+                    <button type="button" data-action="font-decrease" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+                    <button type="button" data-action="font-increase" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+                </div>
+                <button type="button" class="subpage-theme-btn" data-action="theme-toggle" aria-label="Alternar tema">Tema</button>
+                <div class="subpage-menu-icon" aria-label="Abrir menu" role="button" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Lucas Silva dos Santos">
-        <title>Papanicolau</title>
-        <link href="css/style.css" rel="stylesheet">
+    <main class="subpage-main">
+        <section class="subpage-hero">
+            <h1>Hub: Cancer do Colo do Utero</h1>
+            <p>Escolha o tema para aprofundar seu conhecimento e apoiar a prevencao com informacao de qualidade.</p>
+        </section>
 
-    </head>
-    <object data="menu_colo.html" height="65px" width="100%"></object>
-    <div id="titulo">
-        Câncer do colo
-    </div>
-    <body>
-        
-        <div id="subtitulo">
-            Clique na informação que deseja ver a direita do HOME
-        </div>
-    </body>
+        <section class="subpage-grid">
+            <article class="subpage-card">
+                <h2>Conteudos disponiveis</h2>
+                <p>Esta area concentra os principais temas sobre cancer do colo do utero em uma navegacao simples e objetiva.</p>
+                <div class="subpage-links-grid">
+                    <a class="subpage-mini-card" href="cancer_colo_intro.html"><strong>Introducao</strong><br>Visao geral da doenca e importancia da prevencao.</a>
+                    <a class="subpage-mini-card" href="cancer_colo_fatores.html"><strong>Fatores de risco</strong><br>Comportamentos e condicoes associados.</a>
+                    <a class="subpage-mini-card" href="cancer_colo_sintomas.html"><strong>Sintomas</strong><br>Sinais de alerta e quando procurar ajuda.</a>
+                    <a class="subpage-mini-card" href="cancer_colo_diagnostico.html"><strong>Diagnostico</strong><br>Como os exames detectam alteracoes.</a>
+                </div>
+            </article>
 
-    <footer id="footer">
-        <object data="pe.html" height="40px" width="100%"></object>
+            <aside class="subpage-card">
+                <img class="subpage-image" src="img/img_colo.jpg" alt="Representacao da prevencao do cancer de colo do utero" loading="lazy" decoding="async">
+                <p class="subpage-note">Navegacao atualizada para facilitar estudo, apresentacao e divulgacao do projeto.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="subpage-footer">
+        <p>&copy; <span id="current-year"></span> Portal Outubro Rosa</p>
     </footer>
 
+    <script src="js/subpages.js"></script>
+</body>
 </html>
+
+

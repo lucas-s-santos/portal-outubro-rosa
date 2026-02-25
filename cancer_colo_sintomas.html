@@ -1,43 +1,75 @@
-<!DOCTYPE html><!DOCTYPE html>
-<html lang="pt-br">
-
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Lucas Silva dos Santos">
-        <title>Papanicolau</title>
-        <link href="css/style.css" rel="stylesheet">
-
-    </head>
-    <object data="menu_colo.html" height="65px" width="100%"></object>
-    <div id="titulo">
-        Câncer do colo
-    </div>
-    <body>
-       
-        <div id="paragrafo">
-            <div id="subtitulo"><b>Sintomas do câncer de colo de útero</b></div>
-            <p>Nas fases iniciais, o câncer de colo de útero é assintomático. Quando os sintomas aparecem, os mais importantes são:</p>
-            <ul>
-                <li>Sangramento vaginal especialmente depois das relações sexuais, no intervalo entre as menstruações ou após a <b>menopausa</b>;</li>
-                <li>Corrimento vaginal (leucorreia) de cor escura e com mau cheiro.</li>
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Silva dos Santos">
+    <meta name="description" content="Sintomas mais comuns do cancer do colo do utero e quando procurar atendimento medico.">
+    <title>Sintomas | Cancer do Colo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="subpage-header">
+        <nav class="subpage-nav">
+            <a class="subpage-brand" href="index.html">Outubro Rosa</a>
+            <ul class="subpage-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cancer_colo_intro.html">Introducao</a></li>
+                <li><a href="cancer_colo_fatores.html">Fatores</a></li>
+                <li><a class="active" href="cancer_colo_sintomas.html">Sintomas</a></li>
+                <li><a href="cancer_colo_diagnostico.html">Diagnostico</a></li>
             </ul>
-            <p>Nos estágios mais avançados da doença, outros sinais podem aparecer. Entre eles, vale destacar:</p>
-            <ul>
-                <li>Massa palpável no colo de útero;</li>
-                <div id="img_1"  style="float: right">
-                    <img src="img/img_sinto.png" alt="Imagem" id="img_1" width="75%">
+            <div class="subpage-header-buttons">
+                <div class="font-size-controls" aria-label="Controle de tamanho de fonte">
+                    <button type="button" data-action="font-decrease" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+                    <button type="button" data-action="font-increase" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
                 </div>
-                <li>Hemorragias;</li>
-                <li>Obstrução das vias urinárias e intestinos;</li>
-                <li>Dor lombar e abdominal;</li>
-                <li>Perda de apetite e de peso.</li>
-            </ul>
-        </div>
-    </body>
+                <button type="button" class="subpage-theme-btn" data-action="theme-toggle" aria-label="Alternar tema">Tema</button>
+                <div class="subpage-menu-icon" aria-label="Abrir menu" role="button" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <footer id="footer">
-        <object data="pe.html" height="40px" width="100%"></object>
+    <main class="subpage-main">
+        <section class="subpage-hero">
+            <h1>Sintomas e sinais de alerta</h1>
+            <p>Nas fases iniciais, a doenca pode nao apresentar sintomas. Por isso o rastreamento regular e essencial.</p>
+        </section>
+
+        <section class="subpage-grid">
+            <article class="subpage-card">
+                <h2>Sinais que merecem investigacao</h2>
+                <ul>
+                    <li>Sangramento vaginal fora do periodo menstrual.</li>
+                    <li>Sangramento apos relacao sexual ou apos menopausa.</li>
+                    <li>Corrimento com odor forte e aspecto alterado.</li>
+                    <li>Dor pelvica persistente, dor lombar e desconforto abdominal.</li>
+                    <li>Em casos avancados, perda de peso e alteracoes urinarias/intestinais.</li>
+                </ul>
+                <p>A presenca desses sinais nao confirma cancer, mas exige avaliacao medica o quanto antes.</p>
+
+                <div class="subpage-links-grid">
+                    <a class="subpage-mini-card" href="cancer_colo_diagnostico.html"><strong>Proximo: Diagnostico</strong><br>Entenda como os exames confirmam o quadro.</a>
+                    <a class="subpage-mini-card" href="consulta.html"><strong>Buscar atendimento</strong><br>Veja como organizar consulta e retorno.</a>
+                </div>
+            </article>
+
+            <aside class="subpage-card">
+                <img class="subpage-image" src="img/img_sinto.png" alt="Sinais e sintomas em saude feminina" loading="lazy" decoding="async">
+            </aside>
+        </section>
+    </main>
+
+    <footer class="subpage-footer">
+        <p>&copy; <span id="current-year"></span> Portal Outubro Rosa</p>
     </footer>
 
+    <script src="js/subpages.js"></script>
+</body>
 </html>
+
+

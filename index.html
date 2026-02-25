@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outubro Rosa - Portal de Prevenção e Cuidado</title>
+    <meta name="description" content="Portal educativo sobre prevenção do câncer de colo do útero e câncer de mama, com informações práticas, exames e orientação de cuidado.">
+    <meta name="keywords" content="outubro rosa, prevenção, câncer de mama, câncer de colo do útero, papanicolau, mamografia, saúde da mulher">
+    <meta name="author" content="Lucas Silva dos Santos">
+    <meta property="og:title" content="Outubro Rosa - Portal de Prevenção e Cuidado">
+    <meta property="og:description" content="Projeto educacional sobre prevenção do câncer de colo do útero e câncer de mama.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/banner.png">
+    <meta name="theme-color" content="#d1308a">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3E%F0%9F%8E%80%3C/text%3E%3C/svg%3E">
     
     <!-- Google Fonts, Font Awesome, AOS, Swiper... -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +25,8 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="layout-v2">
+    <a class="skip-link" href="#inicio">Pular para o conteúdo principal</a>
 
     <!-- CABEÇALHO COM NOVOS LINKS -->
     <header class="main-header">
@@ -29,15 +39,16 @@
                 <li><a href="#calculator">Avalie seu Cuidado</a></li>
                 <li><a href="#timeline">Prevenção</a></li>
                 <li><a href="#glossary">Glossário</a></li>
+                <li><a href="#paginas">Páginas</a></li>
                 <li><a href="#ajuda">Ajuda</a></li>
             </ul>
             <div class="header-buttons">
                 <div class="font-size-controls">
-                    <button id="font-decrease-btn" title="Diminuir fonte">A-</button>
-                    <button id="font-increase-btn" title="Aumentar fonte">A+</button>
+                    <button id="font-decrease-btn" title="Diminuir fonte" aria-label="Diminuir tamanho da fonte">A-</button>
+                    <button id="font-increase-btn" title="Aumentar fonte" aria-label="Aumentar tamanho da fonte">A+</button>
                 </div>
-                <button id="theme-toggle-btn" title="Mudar tema"><i class="fa-solid fa-moon"></i></button>
-                <div class="menu-icon">
+                <button id="theme-toggle-btn" title="Mudar tema" aria-label="Alternar tema do site"><i class="fa-solid fa-moon"></i></button>
+                <div class="menu-icon" aria-label="Abrir menu de navegação" role="button" tabindex="0">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -68,7 +79,7 @@
                     </div>
                     <div class="image-content" data-aos="fade-left" data-aos-delay="200">
                         <div class="image-container wide">
-                            <img src="img/imagem1.jpg" alt="Ilustração do exame Papanicolau">
+                            <img src="img/img_colo.jpg" alt="Ilustração educativa sobre prevenção do câncer de colo do útero" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -91,20 +102,23 @@
                     <h3>O que é a Mamografia?</h3>
                     <p>É um raio-X das mamas capaz de identificar microcalcificações e nódulos que não seriam notados na palpação. É a ferramenta mais eficaz para o diagnóstico precoce. A recomendação geral é que mulheres acima de 40 anos façam o exame anualmente, mas um médico sempre deve ser consultado.</p>
                     <div class="image-container wide">
-                        <img src="img/mamografia-digital.jpg.png" alt="Mulher realizando exame de mamografia">
+                        <img src="img/mamografia4.jpg" alt="Paciente realizando exame de mamografia" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <div id="tab-como-funciona" class="tab-content">
                     <h3>Como o Exame Funciona?</h3>
                     <p>O mamógrafo comprime as mamas por alguns segundos para espalhar o tecido mamário e obter uma imagem nítida. Essa compressão pode causar um desconforto temporário, mas é fundamental para a qualidade do exame e para reduzir a dose de radiação. O procedimento todo dura menos de 20 minutos.</p>
+                    <div class="image-container wide">
+                        <img src="img/ecografia-ou-mamografia.jpg" alt="Comparação visual de exames de ecografia e mamografia" loading="lazy" decoding="async">
+                    </div>
                 </div>
 
                 <div id="tab-autoexame" class="tab-content">
                     <h3>A Importância do Autoexame</h3>
                     <p>O autoexame mensal ajuda a mulher a conhecer seu próprio corpo e a perceber qualquer anormalidade. Ele não substitui a mamografia, mas é uma ferramenta importantíssima de autoconhecimento e alerta. Ao identificar qualquer alteração, procure seu médico.</p>
                     <div class="image-container wide">
-                        <img src="img/autoexame.png.jpg" alt="Infográfico ensinando a fazer o autoexame das mamas">
+                        <img src="img/autoexame.png.jpg" alt="Infográfico ensinando a fazer o autoexame das mamas" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -113,10 +127,10 @@
                     <p>Além da mamografia, o médico pode solicitar outros exames para um diagnóstico mais preciso, como a Ultrassonografia, a Ressonância Magnética e, se necessário, a Biópsia, que é o único exame capaz de confirmar se um nódulo é maligno ou benigno.</p>
                     <div class="content-wrapper-small">
                         <div class="image-container square">
-                            <img src="img/ultrassom.jpeg" alt="Exame de ultrassom da mama">
+                            <img src="img/ultrassom.jpeg" alt="Exame de ultrassom da mama" loading="lazy" decoding="async">
                         </div>
                         <div class="image-container square">
-                            <img src="img/biopsia.jpg" alt="Médica analisando resultado de biópsia">
+                            <img src="img/biopsia.jpg" alt="Médica analisando resultado de biópsia" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -200,7 +214,7 @@
                     <div class="accordion-item"><button class="accordion-button">Biópsia</button><div class="accordion-content"><p>É um procedimento no qual um pequeno fragmento de tecido do corpo é removido para ser analisado em laboratório. É o único exame que pode confirmar com 100% de certeza se uma lesão é câncer ou não.</p></div></div>
                     <div class="accordion-item"><button class="accordion-button">Colposcopia</button><div class="accordion-content"><p>Um exame que permite visualizar o colo do útero com uma lente de aumento (colposcópio). Geralmente é solicitado após um resultado alterado no Papanicolau para investigar a área suspeita.</p></div></div>
                     <div class="accordion-item"><button class="accordion-button">HPV (Papilomavírus Humano)</button><div class="accordion-content"><p>Um vírus muito comum, transmitido principalmente por via sexual. Alguns tipos (de alto risco) são a principal causa do câncer de colo do útero se a infecção não for eliminada pelo corpo.</p></div></div>
-                    <div class="accordion-item"><button class="accordion-button">Nódulo Benigno vs. Maligno</button><div class="accordion-content"><p>Um nódulo é um caroço. **Benigno** significa que não é câncer. **Maligno** significa que é câncer e tem a capacidade de se espalhar (metástase).</p></div></div>
+                    <div class="accordion-item"><button class="accordion-button">Nódulo Benigno vs. Maligno</button><div class="accordion-content"><p>Um nódulo é um caroço. <strong>Benigno</strong> significa que não é câncer. <strong>Maligno</strong> significa que é câncer e tem a capacidade de se espalhar (metástase).</p></div></div>
                     <div class="accordion-item"><button class="accordion-button">Metástase</button><div class="accordion-content"><p>Ocorre quando as células de um câncer se desprendem do tumor original e formam novos tumores em outras partes do corpo. É o que caracteriza um estágio avançado da doença.</p></div></div>
                 </div>
             </div>
@@ -230,6 +244,11 @@
                         <h3>Direitos da Paciente</h3>
                         <p>Pacientes com câncer têm direitos garantidos por lei no Brasil, como auxílio-doença, saque do FGTS, isenção de imposto de renda na aposentadoria e tratamento gratuito pelo SUS. Procure o serviço social do seu hospital para mais informações.</p>
                     </div>
+                    <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                        <div class="image-container square">
+                            <img src="img/mulheres.png" alt="Mulheres apoiando a prevenção e o cuidado com a saúde" loading="lazy" decoding="async">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -240,16 +259,37 @@
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Imagens que inspiram cuidado, prevenção e a força da vida.</p>
                 <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca1.png" alt="Duas mulheres segurando o laço rosa" /></div></div>
-                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca2.png" alt="Mãos com laço rosa sobre a mesa" /></div></div>
-                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca3.png" alt="Mãos unidas segurando laço rosa" /></div></div>
-                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca5.jpg" alt="Caderno com laço rosa" /></div></div>
-                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca6.png" alt="Mulher trabalhando no computador" /></div></div>
-                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca7.png" alt="Pessoa pesquisando no computador" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca1.png" alt="Duas mulheres segurando o laço rosa" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca2.png" alt="Mãos com laço rosa sobre a mesa" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca3.png" alt="Mãos unidas segurando laço rosa" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca5.jpg" alt="Caderno com laço rosa" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca6.png" alt="Mulher trabalhando no computador" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/esperanca7.png" alt="Pessoa pesquisando no computador" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/banner.png" alt="Banner rosa de conscientização" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/faixa-banner.jpg" alt="Faixa de campanha Outubro Rosa" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/pesquisa.jpg" alt="Profissional de saúde realizando pesquisa" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/mamografia.jpg" alt="Exame de mamografia em ambiente clínico" loading="lazy" decoding="async" /></div></div>
+                        <div class="swiper-slide"><div class="image-container square"><img src="img/mamografia%203.jpg" alt="Médica preparando equipamento para mamografia" loading="lazy" decoding="async" /></div></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paginas" class="content-section">
+            <div class="container">
+                <h2 data-aos="fade-up"><i class="fa-solid fa-link"></i> Acessar Outras Páginas</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Use estes atalhos para acessar as páginas detalhadas do projeto e continuar as melhorias.</p>
+                <div class="quick-links-grid" data-aos="fade-up" data-aos-delay="200">
+                    <a class="quick-link-card" href="papanicolau.html"><h3>Papanicolau</h3><p>Página completa sobre exame preventivo.</p></a>
+                    <a class="quick-link-card" href="consulta.html"><h3>Consulta</h3><p>Orientações sobre periodicidade e resultados.</p></a>
+                    <a class="quick-link-card" href="cancer_colo.html"><h3>Câncer do Colo</h3><p>Hub com navegação para temas específicos.</p></a>
+                    <a class="quick-link-card" href="cancer_colo_intro.html"><h3>Introdução</h3><p>Visão geral sobre o tema.</p></a>
+                    <a class="quick-link-card" href="cancer_colo_fatores.html"><h3>Fatores de Risco</h3><p>Principais fatores associados.</p></a>
+                    <a class="quick-link-card" href="cancer_colo_sintomas.html"><h3>Sintomas</h3><p>Sinais de atenção e cuidado.</p></a>
+                    <a class="quick-link-card" href="cancer_colo_diagnostico.html"><h3>Diagnóstico</h3><p>Etapas e exames diagnósticos.</p></a>
                 </div>
             </div>
         </section>
@@ -264,8 +304,8 @@
                 <div class="support-links" data-aos="fade-up">
                     <h4>Links Úteis Nacionais:</h4>
                     <ul>
-                        <li><a href="https://www.gov.br/inca/pt-br" target="_blank">Instituto Nacional de Câncer (INCA )</a></li>
-                        <li><a href="https://www.femama.org.br/" target="_blank">FEMAMA</a></li>
+                        <li><a href="https://www.gov.br/inca/pt-br" target="_blank" rel="noopener noreferrer">Instituto Nacional de Câncer (INCA )</a></li>
+                        <li><a href="https://www.femama.org.br/" target="_blank" rel="noopener noreferrer">FEMAMA</a></li>
                     </ul>
                 </div>
             </div>
@@ -292,7 +332,11 @@
                         <li><a href="#calculator">Avalie seu Cuidado</a></li>
                         <li><a href="#timeline">Prevenção</a></li>
                         <li><a href="#glossary">Glossário</a></li>
+                        <li><a href="#paginas">Outras Páginas</a></li>
                         <li><a href="#ajuda">Ajuda</a></li>
+                        <li><a href="papanicolau.html">Papanicolau (página)</a></li>
+                        <li><a href="consulta.html">Consulta (página)</a></li>
+                        <li><a href="cancer_colo.html">Câncer do Colo (página)</a></li>
                     </ul>
                 </div>
                 <div class="footer-credits">
@@ -300,7 +344,7 @@
                     <p>Idealizador Lucas Silva</p>
                 </div>
             </div>
-            <div class="footer-bottom">&copy; Copyright 2025 - Todos os direitos reservados.</div>
+            <div class="footer-bottom">&copy; Copyright <span id="current-year"></span> - Todos os direitos reservados.</div>
         </div>
     </footer>
 
@@ -328,9 +372,25 @@
         // --- LÓGICA DO MENU HAMBURGER ---
         const menuIcon = document.querySelector('.menu-icon');
         const navLinks = document.querySelector('.main-nav ul');
-        menuIcon.addEventListener('click', () => {
+        const navAnchors = document.querySelectorAll('.main-nav a');
+        const closeMobileMenu = () => {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('active');
+        };
+        const toggleMobileMenu = () => {
             navLinks.classList.toggle('active');
             menuIcon.classList.toggle('active');
+        };
+
+        menuIcon.addEventListener('click', toggleMobileMenu);
+        menuIcon.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleMobileMenu();
+            }
+        });
+        navAnchors.forEach((anchor) => {
+            anchor.addEventListener('click', closeMobileMenu);
         });
 
         // --- LÓGICA DO BOTÃO "VOLTAR AO TOPO" ---
@@ -432,19 +492,49 @@
             if (currentFontSize < 22) {
                 currentFontSize += 2;
                 htmlElement.style.fontSize = currentFontSize + 'px';
+                localStorage.setItem('portalFontSize', String(currentFontSize));
             }
         });
         fontDecreaseBtn.addEventListener('click', () => {
             if (currentFontSize > 12) {
                 currentFontSize -= 2;
                 htmlElement.style.fontSize = currentFontSize + 'px';
+                localStorage.setItem('portalFontSize', String(currentFontSize));
             }
         });
 
         // Garante que a primeira aba seja aberta ao carregar
         document.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('portalThemeMode');
+            if (savedMode === 'dark') {
+                body.classList.add('dark-mode');
+                themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            } else if (savedMode === 'high-contrast') {
+                body.classList.add('high-contrast-mode');
+                themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-adjust');
+            }
+
+            const savedFontSize = Number(localStorage.getItem('portalFontSize'));
+            if (savedFontSize >= 12 && savedFontSize <= 22) {
+                currentFontSize = savedFontSize;
+                htmlElement.style.fontSize = currentFontSize + 'px';
+            }
+
             const firstTabDark = document.querySelector('#mamografia .tab-link');
             if(firstTabDark) firstTabDark.click();
+
+            const currentYear = document.getElementById('current-year');
+            if (currentYear) currentYear.textContent = new Date().getFullYear();
+        });
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (body.classList.contains('high-contrast-mode')) {
+                localStorage.setItem('portalThemeMode', 'high-contrast');
+            } else if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('portalThemeMode', 'dark');
+            } else {
+                localStorage.setItem('portalThemeMode', 'light');
+            }
         });
     </script>
 

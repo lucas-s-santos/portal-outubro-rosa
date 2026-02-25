@@ -1,43 +1,75 @@
-<!DOCTYPE html><!DOCTYPE html>
-<html lang="pt-br">
-
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Lucas Silva dos Santos">
-        <title>Papanicolau</title>
-        <link href="css/style.css" rel="stylesheet">
-
-    </head>
-
-    
-    
-    <body>
-        <object data="menu_colo.html" height="65px" width="100%"></object>
-        <div id="titulo">
-            Câncer do colo
-        </div>
-        <div id="img_3"  style="float: right">
-            <img src="img/img_fator_new.png" alt="Imagem" id="img_3" width="90%">
-        </div>
-        <div id="paragrafo">
-            <div id="subtitulo"><b>Fatores de risco para câncer de colo do útero</b></div>
-            <p>A infecção pelo HPV, responsável pelo aparecimento das <b>verrugas genitais</b>, representa o maior fator de risco para o surgimento do câncer de colo de útero. Apesar de existir mais de uma centena de tipos diferentes desse vírus, somente alguns estão associados ao tumor. São classificados como de alto risco os tipos 16, 18, 45 e 56; de baixo risco, os tipos 6, 11, 41, 42 e 44, e de risco intermediário os tipos  31, 33, 35, 51 e 52.</p>
-            <p>Podem ser citados, ainda, como fatores de risco:</p>
-            <ul>
-            <li>Início precoce da atividade sexual;</li>
-            <li>Múltiplos parceiros sexuais ou parceiros com vida sexual promíscua;</li>
-            <li>Cigarro;</li>
-            <li>Baixa imunidade;</li>
-            <li>Não fazer o <b>Papanicolaou</b> com regularidade;</li>
-            <li>Más condições de higiene;</li>
-            <li>Histórico familiar.</li>
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Silva dos Santos">
+    <meta name="description" content="Principais fatores de risco para cancer do colo do utero e orientacoes de prevencao.">
+    <title>Fatores de Risco | Cancer do Colo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="subpage-header">
+        <nav class="subpage-nav">
+            <a class="subpage-brand" href="index.html">Outubro Rosa</a>
+            <ul class="subpage-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cancer_colo_intro.html">Introducao</a></li>
+                <li><a class="active" href="cancer_colo_fatores.html">Fatores</a></li>
+                <li><a href="cancer_colo_sintomas.html">Sintomas</a></li>
+                <li><a href="cancer_colo_diagnostico.html">Diagnostico</a></li>
             </ul>
-        </div>
-    </body>
+            <div class="subpage-header-buttons">
+                <div class="font-size-controls" aria-label="Controle de tamanho de fonte">
+                    <button type="button" data-action="font-decrease" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+                    <button type="button" data-action="font-increase" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+                </div>
+                <button type="button" class="subpage-theme-btn" data-action="theme-toggle" aria-label="Alternar tema">Tema</button>
+                <div class="subpage-menu-icon" aria-label="Abrir menu" role="button" tabindex="0">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <footer id="footer">
-        <object data="pe.html" height="40px" width="100%"></object>
+    <main class="subpage-main">
+        <section class="subpage-hero">
+            <h1>Fatores de risco</h1>
+            <p>Conhecer os fatores associados ajuda na prevencao e na adocao de habitos mais seguros.</p>
+        </section>
+
+        <section class="subpage-grid">
+            <article class="subpage-card">
+                <h2>Principais fatores</h2>
+                <ul>
+                    <li>Infeccao persistente por HPV, especialmente tipos de alto risco.</li>
+                    <li>Inicio precoce da vida sexual e multiplos parceiros.</li>
+                    <li>Tabagismo e baixa imunidade.</li>
+                    <li>Ausencia de acompanhamento ginecologico regular.</li>
+                    <li>Historico familiar e fatores sociais associados ao acesso em saude.</li>
+                </ul>
+                <p>A vacinacao contra HPV e a realizacao periodica do exame preventivo sao as medidas mais importantes para reduzir risco e mortalidade.</p>
+
+                <div class="subpage-links-grid">
+                    <a class="subpage-mini-card" href="cancer_colo_sintomas.html"><strong>Proximo: Sintomas</strong><br>Veja os sinais que merecem atencao.</a>
+                    <a class="subpage-mini-card" href="consulta.html"><strong>Agendar consulta</strong><br>Entenda periodicidade e retorno do resultado.</a>
+                </div>
+            </article>
+
+            <aside class="subpage-card">
+                <img class="subpage-image" src="img/img_fator_new.png" alt="Ilustracao de fatores de risco para cancer de colo" loading="lazy" decoding="async">
+            </aside>
+        </section>
+    </main>
+
+    <footer class="subpage-footer">
+        <p>&copy; <span id="current-year"></span> Portal Outubro Rosa</p>
     </footer>
 
+    <script src="js/subpages.js"></script>
+</body>
 </html>
+
+
