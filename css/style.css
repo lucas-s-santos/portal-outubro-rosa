@@ -93,6 +93,17 @@ i { margin-right: 8px; }
 }
 .skip-link:focus { top: 16px; }
 
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    z-index: 2100;
+    background: linear-gradient(90deg, #ff8cc7 0%, #d1308a 100%);
+    transition: width 0.15s linear;
+}
+
 a:focus-visible, button:focus-visible, input:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
@@ -106,6 +117,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .main-nav ul { list-style: none; display: flex; gap: 1.2rem; flex-wrap: wrap; }
 .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 700; position: relative; padding-bottom: 5px; }
 .main-nav a:hover { color: var(--primary-color); }
+.main-nav a.active-link { color: var(--primary-color); }
 .header-buttons { display: flex; align-items: center; gap: 1rem; }
 
 .font-size-controls { display: flex; align-items: center; gap: 0.25rem; border: 1px solid var(--text-color); border-radius: 5px; padding: 2px; }
@@ -136,6 +148,20 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .content-section-dark h2, .content-section-dark h3, .content-section-dark h4, .content-section-dark a { color: #ffffff; }
 .content-section h2, .content-section-dark h2 { text-align: center; margin-bottom: 1rem; }
 .section-subtitle { text-align: center; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+.glossary-search-wrap { max-width: 800px; margin: 0 auto 1rem auto; }
+#glossary-search {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e5bfd5;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+body.dark-mode #glossary-search {
+    background: #2b2b2b;
+    color: #f3f3f3;
+    border-color: #4a4a4a;
+}
 .content-wrapper { display: flex; align-items: center; gap: 3rem; margin-top: 2rem; }
 .text-content { flex: 1; }
 .text-content ul { padding-left: 20px; }
@@ -193,6 +219,33 @@ body.high-contrast-mode #care-calculator-form { background-color: #111; border-c
 .calculator-result-box small { display: block; margin-top: 1.5rem; opacity: 0.8; }
 
 /* --- SEÇÃO LINHA DO TEMPO --- */
+.timeline-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 1rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 800px;
+}
+.timeline-stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 0.9rem;
+    text-align: center;
+}
+.timeline-stat-number {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    color: #fff;
+}
+.timeline-stat-card span {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
 .timeline-container { position: relative; max-width: 800px; margin: 50px auto; }
 .timeline-container::after { content: ''; position: absolute; width: 4px; background-color: var(--primary-color); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
 .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
@@ -225,10 +278,27 @@ body.high-contrast-mode .accordion-button { color: #ffff00; }
 body.high-contrast-mode .accordion-button::after { color: #ffff00; }
 
 /* --- SEÇÃO MITOS E VERDADES --- */
+.myth-filters { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem; }
+.myth-filter-btn {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.myth-filter-btn.active {
+    background: #fff;
+    color: var(--primary-dark);
+    border-color: #fff;
+}
 .myth-cards-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 3rem; perspective: 1000px; }
 .myth-card { background-color: transparent; width: 300px; height: 200px; border: none; cursor: pointer; }
+.myth-card.is-hidden { display: none; }
 .myth-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
 .myth-card:hover .myth-card-inner { transform: rotateY(180deg); }
+.myth-card.is-flipped .myth-card-inner { transform: rotateY(180deg); }
 .myth-card-front, .myth-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 .myth-card-front { background-color: var(--primary-color); color: white; font-size: 1.2rem; font-weight: bold; }
 .myth-card-back { background-color: var(--bg-color); color: var(--text-color); transform: rotateY(180deg); border: 1px solid var(--primary-color); }
@@ -292,6 +362,7 @@ body.high-contrast-mode .accordion-button::after { color: #ffff00; }
     .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
     .timeline-item:nth-child(even) { left: 0%; }
     .timeline-item::after { left: 17.5px; }
+    .timeline-stats { grid-template-columns: 1fr; }
     .hero-section { background-attachment: scroll; }
 }
 
@@ -306,6 +377,13 @@ body.high-contrast-mode .accordion-button::after { color: #ffff00; }
     .myth-card:hover .myth-card-inner {
         transform: none !important;
     }
+}
+
+/* Fallback para garantir exibicao do conteudo quando animacao estiver desativada */
+body.aos-disabled [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
 }
 
 /* --- GRID DE LINKS RAPIDOS --- */

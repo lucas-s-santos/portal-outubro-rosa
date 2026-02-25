@@ -27,6 +27,7 @@
 </head>
 <body class="layout-v2">
     <a class="skip-link" href="#inicio">Pular para o conteúdo principal</a>
+    <div id="scroll-progress" aria-hidden="true"></div>
 
     <!-- CABEÇALHO COM NOVOS LINKS -->
     <header class="main-header">
@@ -63,6 +64,7 @@
             <div class="hero-content">
                 <h1><span id="typing-effect"></span></h1>
                 <p data-aos="fade-up" data-aos-delay="200">Um portal completo sobre a prevenção ao câncer de colo do útero e de mama. A informação é a melhor proteção.</p>
+                <p class="hero-highlight" id="prevention-tip">Dica de hoje: mantenha seus exames preventivos em dia.</p>
             </div>
         </section>
 
@@ -196,6 +198,20 @@
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-timeline"></i> Linha do Tempo da Prevenção</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Um guia visual dos cuidados essenciais em cada fase da vida da mulher.</p>
+                <div class="timeline-stats" data-aos="fade-up" data-aos-delay="150">
+                    <div class="timeline-stat-card">
+                        <strong class="timeline-stat-number" data-count="4">0</strong>
+                        <span>Fases de cuidado</span>
+                    </div>
+                    <div class="timeline-stat-card">
+                        <strong class="timeline-stat-number" data-count="2">0</strong>
+                        <span>Exames principais</span>
+                    </div>
+                    <div class="timeline-stat-card">
+                        <strong class="timeline-stat-number" data-count="100">0</strong>
+                        <span>Compromisso com prevenção (%)</span>
+                    </div>
+                </div>
                 <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-item"><div class="timeline-content"><h3>9 a 14 anos: Vacina HPV</h3><p>A vacinação contra o HPV é a forma mais eficaz de prevenção primária contra o câncer de colo do útero. É fundamental que meninas (e meninos) tomem as doses nesta faixa etária.</p><span class="timeline-date">Adolescência</span></div></div>
                     <div class="timeline-item"><div class="timeline-content"><h3>A partir dos 20: Autoexame</h3><p>O autoexame das mamas deve se tornar um hábito mensal. Conhecer o próprio corpo é o primeiro passo para notar qualquer alteração. Lembre-se: ele não substitui os exames médicos.</p><span class="timeline-date">Vida Adulta</span></div></div>
@@ -210,6 +226,9 @@
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-book-medical"></i> Descomplicando a Saúde: Glossário</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Entenda os termos médicos mais comuns de forma simples e direta.</p>
+                <div class="glossary-search-wrap" data-aos="fade-up" data-aos-delay="150">
+                    <input id="glossary-search" type="search" placeholder="Buscar termo no glossario..." aria-label="Buscar termo no glossario">
+                </div>
                 <div class="accordion" data-aos="fade-up" data-aos-delay="200">
                     <div class="accordion-item"><button class="accordion-button">Biópsia</button><div class="accordion-content"><p>É um procedimento no qual um pequeno fragmento de tecido do corpo é removido para ser analisado em laboratório. É o único exame que pode confirmar com 100% de certeza se uma lesão é câncer ou não.</p></div></div>
                     <div class="accordion-item"><button class="accordion-button">Colposcopia</button><div class="accordion-content"><p>Um exame que permite visualizar o colo do útero com uma lente de aumento (colposcópio). Geralmente é solicitado após um resultado alterado no Papanicolau para investigar a área suspeita.</p></div></div>
@@ -224,10 +243,17 @@
         <section id="mitos-verdades" class="content-section-dark">
             <div class="container">
                 <h2 data-aos="fade-up"><i class="fa-solid fa-comment-dots"></i> Mitos e Verdades</h2>
+                <div class="myth-filters" data-aos="fade-up" data-aos-delay="50">
+                    <button type="button" class="myth-filter-btn active" data-filter="all">Todos</button>
+                    <button type="button" class="myth-filter-btn" data-filter="mito">Mitos</button>
+                    <button type="button" class="myth-filter-btn" data-filter="verdade">Verdades</button>
+                </div>
                 <div class="myth-cards-container">
-                    <div class="myth-card" data-aos="zoom-in"><div class="myth-card-inner"><div class="myth-card-front"><p>A vacina contra o HPV substitui o Papanicolau?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A vacina é essencial, mas não protege contra todos os tipos de HPV. O Papanicolau continua sendo indispensável.</p></div></div></div>
-                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="100"><div class="myth-card-inner"><div class="myth-card-front"><p>Mamografia causa câncer de tireoide?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A dose de radiação é extremamente baixa e direcionada para as mamas. Não há evidências que comprovem essa relação.</p></div></div></div>
-                    <div class="myth-card" data-aos="zoom-in" data-aos-delay="200"><div class="myth-card-inner"><div class="myth-card-front"><p>Achar um nódulo no autoexame é certeza de câncer?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Cerca de 80% dos nódulos encontrados são benignos. Mesmo assim, todo nódulo deve ser investigado por um médico.</p></div></div></div>
+                    <div class="myth-card" data-myth-type="mito" data-aos="zoom-in" tabindex="0" role="button" aria-label="Abrir card de mito ou verdade"><div class="myth-card-inner"><div class="myth-card-front"><p>A vacina contra o HPV substitui o Papanicolau?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A vacina é essencial, mas não protege contra todos os tipos de HPV. O Papanicolau continua sendo indispensável.</p></div></div></div>
+                    <div class="myth-card" data-myth-type="mito" data-aos="zoom-in" data-aos-delay="100" tabindex="0" role="button" aria-label="Abrir card de mito ou verdade"><div class="myth-card-inner"><div class="myth-card-front"><p>Mamografia causa câncer de tireoide?</p></div><div class="myth-card-back"><h3>MITO</h3><p>A dose de radiação é extremamente baixa e direcionada para as mamas. Não há evidências que comprovem essa relação.</p></div></div></div>
+                    <div class="myth-card" data-myth-type="mito" data-aos="zoom-in" data-aos-delay="200" tabindex="0" role="button" aria-label="Abrir card de mito ou verdade"><div class="myth-card-inner"><div class="myth-card-front"><p>Achar um nódulo no autoexame é certeza de câncer?</p></div><div class="myth-card-back"><h3>MITO</h3><p>Cerca de 80% dos nódulos encontrados são benignos. Mesmo assim, todo nódulo deve ser investigado por um médico.</p></div></div></div>
+                    <div class="myth-card" data-myth-type="verdade" data-aos="zoom-in" data-aos-delay="300" tabindex="0" role="button" aria-label="Abrir card de mito ou verdade"><div class="myth-card-inner"><div class="myth-card-front"><p>O Papanicolau pode identificar lesões antes dos sintomas?</p></div><div class="myth-card-back"><h3>VERDADE</h3><p>Quando feito regularmente, o exame detecta alterações precoces e aumenta muito as chances de tratamento eficaz.</p></div></div></div>
+                    <div class="myth-card" data-myth-type="verdade" data-aos="zoom-in" data-aos-delay="400" tabindex="0" role="button" aria-label="Abrir card de mito ou verdade"><div class="myth-card-inner"><div class="myth-card-front"><p>Descobrir cedo melhora a chance de cura?</p></div><div class="myth-card-back"><h3>VERDADE</h3><p>A detecção precoce permite iniciar cuidado rapidamente e melhora os resultados do tratamento.</p></div></div></div>
                 </div>
             </div>
         </section>
@@ -354,7 +380,21 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         // --- INICIALIZAÇÃO DAS BIBLIOTECAS ---
-        AOS.init({ duration: 1000, once: true } );
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            document.body.classList.add('aos-disabled');
+        }
+        AOS.init({
+            duration: 650,
+            easing: 'ease-out-cubic',
+            offset: 70,
+            once: true,
+            mirror: false,
+            disable: prefersReducedMotion
+        });
+        window.addEventListener('load', () => {
+            AOS.refreshHard();
+        });
 
         var swiper = new Swiper(".mySwiper", {
             effect: "coverflow", grabCursor: true, centeredSlides: true, slidesPerView: "auto",
@@ -373,6 +413,7 @@
         const menuIcon = document.querySelector('.menu-icon');
         const navLinks = document.querySelector('.main-nav ul');
         const navAnchors = document.querySelectorAll('.main-nav a');
+        const sectionAnchors = document.querySelectorAll('.main-nav a[href^="#"]');
         const closeMobileMenu = () => {
             navLinks.classList.remove('active');
             menuIcon.classList.remove('active');
@@ -393,12 +434,31 @@
             anchor.addEventListener('click', closeMobileMenu);
         });
 
-        // --- LÓGICA DO BOTÃO "VOLTAR AO TOPO" ---
+        // --- LÓGICA DO BOTÃO "VOLTAR AO TOPO" + PROGRESSO ---
         const backToTopButton = document.querySelector("#back-to-top-btn");
+        const scrollProgress = document.getElementById('scroll-progress');
         window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) { backToTopButton.classList.add("show"); } 
             else { backToTopButton.classList.remove("show"); }
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+            if (scrollProgress) scrollProgress.style.width = `${Math.min(progress, 100)}%`;
         });
+
+        // --- LINK ATIVO POR SEÇÃO ---
+        const observedSections = Array.from(sectionAnchors)
+            .map((anchor) => document.querySelector(anchor.getAttribute('href')))
+            .filter(Boolean);
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const currentId = `#${entry.target.id}`;
+                sectionAnchors.forEach((anchor) => {
+                    anchor.classList.toggle('active-link', anchor.getAttribute('href') === currentId);
+                });
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+        observedSections.forEach((section) => sectionObserver.observe(section));
 
         // --- LÓGICA DAS ABAS (TABS) ---
         function openTab(evt, tabName) {
@@ -428,6 +488,91 @@
                 }
             });
         });
+
+        // --- BUSCA NO GLOSSÁRIO ---
+        const glossarySearch = document.getElementById('glossary-search');
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        if (glossarySearch) {
+            glossarySearch.addEventListener('input', (event) => {
+                const term = event.target.value.trim().toLowerCase();
+                accordionItems.forEach((item) => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(term) ? '' : 'none';
+                });
+            });
+        }
+
+        // --- LÓGICA DE MITOS E VERDADES (FILTROS + FLIP) ---
+        const mythFilterButtons = document.querySelectorAll('.myth-filter-btn');
+        const mythCards = document.querySelectorAll('.myth-card');
+
+        mythFilterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const selectedFilter = button.dataset.filter;
+                mythFilterButtons.forEach((btn) => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                mythCards.forEach((card) => {
+                    const type = card.dataset.mythType;
+                    const show = selectedFilter === 'all' || selectedFilter === type;
+                    card.classList.toggle('is-hidden', !show);
+                    if (!show) card.classList.remove('is-flipped');
+                });
+            });
+        });
+
+        mythCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('is-flipped');
+            });
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    card.classList.toggle('is-flipped');
+                }
+            });
+        });
+
+        // --- DICA DINÂMICA NO HERO ---
+        const preventionTip = document.getElementById('prevention-tip');
+        if (preventionTip) {
+            const tips = [
+                'Dica de hoje: mantenha seus exames preventivos em dia.',
+                'Dica de hoje: autoexame mensal ajuda no autoconhecimento.',
+                'Dica de hoje: vacinacao contra HPV e um cuidado essencial.',
+                'Dica de hoje: qualquer alteracao deve ser avaliada por profissional.'
+            ];
+            preventionTip.textContent = tips[new Date().getDate() % tips.length];
+        }
+
+        // --- CONTADORES DA LINHA DO TEMPO ---
+        const timelineStats = document.querySelector('.timeline-stats');
+        const timelineNumbers = document.querySelectorAll('.timeline-stat-number');
+        let countersStarted = false;
+        const animateCounters = () => {
+            if (countersStarted) return;
+            countersStarted = true;
+            timelineNumbers.forEach((numberEl) => {
+                const target = Number(numberEl.dataset.count || 0);
+                const duration = 1200;
+                const startTime = performance.now();
+                const step = (now) => {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const current = Math.floor(progress * target);
+                    numberEl.textContent = String(current);
+                    if (progress < 1) requestAnimationFrame(step);
+                };
+                requestAnimationFrame(step);
+            });
+        };
+        if (timelineStats) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) animateCounters();
+                });
+            }, { threshold: 0.4 });
+            statsObserver.observe(timelineStats);
+        }
 
         // --- LÓGICA DA CALCULADORA DE CUIDADO ---
         const calculatorForm = document.getElementById('care-calculator-form');
@@ -540,3 +685,5 @@
 
 </body>
 </html>
+
+
